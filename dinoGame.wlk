@@ -8,7 +8,7 @@ object juego{
 		game.width(12)
 		game.height(8)
 		game.title("Dino Game")
-		game.boardGround("fondo")
+		game.boardGround("fondo.png")
 		game.addVisual(suelo)
 		game.addVisual(cactus)
 		game.addVisual(dino)
@@ -50,9 +50,9 @@ object gameOver {
 }
 
 object reloj {
-	var property tiempo = 10 
-	//method text() = tiempo.toString()
-        //method textColor() = "00FF00FF"
+	var property tiempo = 0 
+	method text() = tiempo.toString()
+  //method textColor() = "00FF00FF"
 	method position() = game.at(1, game.height()-1)
 	
 	method pasarTiempo() {
@@ -68,11 +68,9 @@ object reloj {
 }
 
 object cactus {
-	 
 	var property position = self.posicionInicial()
 
 	method image() = "cactus.png"
-	
 	method posicionInicial() = game.at(game.width()-1,suelo.position().y())
 
 	method iniciar(){
@@ -93,6 +91,7 @@ object cactus {
 }
 
 object suelo{
+
 	method position() = game.origin().up(1)
 	method image() = "suelo.png"
 }
