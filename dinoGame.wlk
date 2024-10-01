@@ -51,9 +51,8 @@ object gameOver {
 
 object reloj {
 	var property tiempo = 10 
-	method image() = "dino.png"
 	//method text() = tiempo.toString()
-  //  method textColor() = "00FF00FF"
+        //method textColor() = "00FF00FF"
 	method position() = game.at(1, game.height()-1)
 	
 	method pasarTiempo() {
